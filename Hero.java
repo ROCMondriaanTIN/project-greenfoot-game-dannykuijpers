@@ -10,6 +10,8 @@ public class Hero extends Mover {
     private final double gravity;
     private final double acc;
     private final double drag;
+    int oldY;
+    boolean canJump = true;
 
     public Hero() {
         super();
@@ -36,16 +38,26 @@ public class Hero extends Mover {
                 break;
             }
         }
-    }
-
-    public void handleInput() {
-        if (Greenfoot.isKeyDown("w") || Greenfoot.isKeyDown("up") || Greenfoot.isKeyDown("space")) {
-            velocityY = -10;
+        
+        if (oldY < getY() || oldY > getY()){
+            canJump = false;
         }
+        else{
+            canJump = true;
+        }
+        if(Greenfoot.isKeyDown("up") == false) oldY = getY();
+    }
+    
 
-        if (Greenfoot.isKeyDown("a") || Greenfoot.isKeyDown("left")) {
+    
+    public void handleInput() {
+        if (Greenfoot.isKeyDown("up") && canJump == true){
+            velocityY = -15;
+        }
+        
+        if (Greenfoot.isKeyDown("left")) {
             velocityX = -5;
-        } else if (Greenfoot.isKeyDown("d") || Greenfoot.isKeyDown("right")) {
+        } else if (Greenfoot.isKeyDown("right")) {
             velocityX = 5;
         }
     }
