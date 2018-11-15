@@ -1,6 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-public class slak extends Mover
+public class Slak extends Mover
 {
     private int walkRange;
     private int xMin;
@@ -8,7 +8,7 @@ public class slak extends Mover
     private boolean firstAct;
     private int speed;
 
-    public slak() {
+    public Slak() {
         super();
         setImage("slak.png");
         getImage().mirrorHorizontally();

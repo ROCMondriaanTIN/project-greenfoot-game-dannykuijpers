@@ -59,10 +59,10 @@ public class Hero extends Mover {
         }
         applyVelocity();
 
-        for (Actor enemy : getIntersectingObjects(slak.class)) {
+        for (Actor enemy : getIntersectingObjects(Slak.class)) {
             if (enemy != null) {
                 getWorld().removeObject(this);
-                break;
+                return;
             }
         }
         

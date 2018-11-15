@@ -6,14 +6,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class level1 extends World
+public class Level1 extends World
 {
     private CollisionEngine ce;
     /**
      * Constructor for objects of class level1.
      * 
      */
-    public level1()
+    public Level1()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 800, 1, false);
@@ -57,8 +57,8 @@ public class level1 extends World
         // Alle objecten toevoegen aan de wereld: camera, main karakter en mogelijke enemies
         addObject(camera, 0, 0);
         addObject(hero, 400, 700);
-        addObject(new slak(), 1470, 885);
-        addObject(new slak(), 1100, 885);
+        addObject(new Slak(), 1470, 885);
+        addObject(new Slak(), 1100, 885);
         
 
         // Initialiseren van de CollisionEngine zodat de speler niet door de tile heen kan lopen.
