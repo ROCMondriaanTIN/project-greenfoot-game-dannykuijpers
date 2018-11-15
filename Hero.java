@@ -35,6 +35,8 @@ public class Hero extends Mover {
     private GreenfootImage walk9mir = new GreenfootImage("p1_walk09_mirrored.png");
     private GreenfootImage walk10mir = new GreenfootImage("p1_walk10_mirrored.png");
     private GreenfootImage walk11mir = new GreenfootImage("p1_walk11_mirrored.png");
+    private GreenfootImage jump = new GreenfootImage("p1_jump.png");
+    private GreenfootImage duck = new GreenfootImage("p1_duck.png");
     private int frame = 1;
 
 
@@ -78,6 +80,7 @@ public class Hero extends Mover {
     public void handleInput() {
         if (Greenfoot.isKeyDown("up") && canJump == true){
             velocityY = -15;
+            animatejump();
         }
         
         if (Greenfoot.isKeyDown("left")) {
@@ -87,6 +90,17 @@ public class Hero extends Mover {
             velocityX = 5;
             animateright();
         }
+        if (Greenfoot.isKeyDown("down")){
+            animateduck();
+        }
+    }
+    
+    public void animateduck(){
+        setImage(duck);
+    }
+    
+    public void animatejump(){
+        setImage(jump);
     }
     
     public void animateleft(){
@@ -139,8 +153,7 @@ public class Hero extends Mover {
         frame++;
     }
     
-    public void animateright()
-    {
+    public void animateright(){
         if(frame == 1)
         { 
             setImage(walk1);
