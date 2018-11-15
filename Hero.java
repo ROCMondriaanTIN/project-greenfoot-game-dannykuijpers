@@ -13,30 +13,30 @@ public class Hero extends Mover {
     int oldY;
     boolean canJump = true;
     
-    private GreenfootImage walk1 = new GreenfootImage("p1_walk01.png");
-    private GreenfootImage walk2 = new GreenfootImage("p1_walk02.png");
-    private GreenfootImage walk3 = new GreenfootImage("p1_walk03.png");
-    private GreenfootImage walk4 = new GreenfootImage("p1_walk04.png");
-    private GreenfootImage walk5 = new GreenfootImage("p1_walk05.png");
-    private GreenfootImage walk6 = new GreenfootImage("p1_walk06.png");
-    private GreenfootImage walk7 = new GreenfootImage("p1_walk07.png");
-    private GreenfootImage walk8 = new GreenfootImage("p1_walk08.png");
-    private GreenfootImage walk9 = new GreenfootImage("p1_walk09.png");
-    private GreenfootImage walk10 = new GreenfootImage("p1_walk10.png");
-    private GreenfootImage walk11 = new GreenfootImage("p1_walk11.png");
-    private GreenfootImage walk1mir = new GreenfootImage("p1_walk01_mirrored.png");
-    private GreenfootImage walk2mir = new GreenfootImage("p1_walk02_mirrored.png");
-    private GreenfootImage walk3mir = new GreenfootImage("p1_walk03_mirrored.png");
-    private GreenfootImage walk4mir = new GreenfootImage("p1_walk04_mirrored.png");
-    private GreenfootImage walk5mir = new GreenfootImage("p1_walk05_mirrored.png");
-    private GreenfootImage walk6mir = new GreenfootImage("p1_walk06_mirrored.png");
-    private GreenfootImage walk7mir = new GreenfootImage("p1_walk07_mirrored.png");
-    private GreenfootImage walk8mir = new GreenfootImage("p1_walk08_mirrored.png");
-    private GreenfootImage walk9mir = new GreenfootImage("p1_walk09_mirrored.png");
-    private GreenfootImage walk10mir = new GreenfootImage("p1_walk10_mirrored.png");
-    private GreenfootImage walk11mir = new GreenfootImage("p1_walk11_mirrored.png");
-    private GreenfootImage jump = new GreenfootImage("p1_jump.png");
-    private GreenfootImage duck = new GreenfootImage("p1_duck.png");
+    private GreenfootImage P1_walk1R = new GreenfootImage("p1_walk01.png");
+    private GreenfootImage P1_walk2R = new GreenfootImage("p1_walk02.png");
+    private GreenfootImage P1_walk3R = new GreenfootImage("p1_walk03.png");
+    private GreenfootImage P1_walk4R = new GreenfootImage("p1_walk04.png");
+    private GreenfootImage P1_walk5R = new GreenfootImage("p1_walk05.png");
+    private GreenfootImage P1_walk6R = new GreenfootImage("p1_walk06.png");
+    private GreenfootImage P1_walk7R = new GreenfootImage("p1_walk07.png");
+    private GreenfootImage P1_walk8R = new GreenfootImage("p1_walk08.png");
+    private GreenfootImage P1_walk9R = new GreenfootImage("p1_walk09.png");
+    private GreenfootImage P1_walk10R = new GreenfootImage("p1_walk10.png");
+    private GreenfootImage P1_walk11R = new GreenfootImage("p1_walk11.png");
+    private GreenfootImage P1_walk1L = new GreenfootImage("p1_walk01_mirrored.png");
+    private GreenfootImage P1_walk2L = new GreenfootImage("p1_walk02_mirrored.png");
+    private GreenfootImage P1_walk3L = new GreenfootImage("p1_walk03_mirrored.png");
+    private GreenfootImage P1_walk4L = new GreenfootImage("p1_walk04_mirrored.png");
+    private GreenfootImage P1_walk5L = new GreenfootImage("p1_walk05_mirrored.png");
+    private GreenfootImage P1_walk6L = new GreenfootImage("p1_walk06_mirrored.png");
+    private GreenfootImage P1_walk7L = new GreenfootImage("p1_walk07_mirrored.png");
+    private GreenfootImage P1_walk8L = new GreenfootImage("p1_walk08_mirrored.png");
+    private GreenfootImage P1_walk9L = new GreenfootImage("p1_walk09_mirrored.png");
+    private GreenfootImage P1_walk10L = new GreenfootImage("p1_walk10_mirrored.png");
+    private GreenfootImage P1_walk11L = new GreenfootImage("p1_walk11_mirrored.png");
+    private GreenfootImage P1_jump = new GreenfootImage("p1_jump.png");
+    private GreenfootImage P1_duck = new GreenfootImage("p1_duck.png");
     private int frame = 1;
 
 
@@ -59,7 +59,7 @@ public class Hero extends Mover {
         }
         applyVelocity();
 
-        for (Actor enemy : getIntersectingObjects(Enemy.class)) {
+        for (Actor enemy : getIntersectingObjects(slak.class)) {
             if (enemy != null) {
                 getWorld().removeObject(this);
                 break;
@@ -96,57 +96,57 @@ public class Hero extends Mover {
     }
     
     public void animateduck(){
-        setImage(duck);
+        setImage(P1_duck);
     }
     
     public void animatejump(){
-        setImage(jump);
+        setImage(P1_jump);
     }
     
     public void animateleft(){
         if(frame == 1)
         {
-            setImage(walk1mir);
+            setImage(P1_walk1L);
         }
         else if(frame == 2)
         {
-            setImage(walk2mir);
+            setImage(P1_walk2L);
         }
         else if(frame == 3)
         {
-            setImage(walk3mir);
+            setImage(P1_walk3L);
         }
         else if(frame == 4)
         {
-            setImage(walk4mir);
+            setImage(P1_walk4L);
         }
         else if(frame == 5)
         {
-            setImage(walk5mir);
+            setImage(P1_walk5L);
         }
         else if(frame == 6)
         {
-            setImage(walk6mir);
+            setImage(P1_walk6L);
         }
         else if(frame == 7)
         {
-            setImage(walk7mir);
+            setImage(P1_walk7L);
         }
         else if(frame == 8)
         {
-            setImage(walk8mir);
+            setImage(P1_walk8L);
         }
         else if(frame == 9)
         {
-            setImage(walk9mir);
+            setImage(P1_walk9L);
         }
         else if(frame == 10)
         {
-            setImage(walk10mir);
+            setImage(P1_walk10L);
         }
         else if(frame == 11)
         {
-            setImage(walk11mir);
+            setImage(P1_walk11L);
             frame = 1;
             return;
         }
@@ -156,47 +156,47 @@ public class Hero extends Mover {
     public void animateright(){
         if(frame == 1)
         { 
-            setImage(walk1);
+            setImage(P1_walk1R);
         }
         else if(frame == 2)
         {
-            setImage(walk2);
+            setImage(P1_walk2R);
         }
         else if(frame == 3)
         {
-            setImage(walk3);
+            setImage(P1_walk3R);
         }
         else if(frame == 4)
         {
-            setImage(walk4);
+            setImage(P1_walk4R);
         }
         else if(frame == 5)
         {
-            setImage(walk5);
+            setImage(P1_walk5R);
         }
         else if(frame == 6)
         {
-            setImage(walk6);
+            setImage(P1_walk6R);
         }
         else if(frame == 7)
         {
-            setImage(walk7);
+            setImage(P1_walk7R);
         }
         else if(frame == 8)
         {
-            setImage(walk8);
+            setImage(P1_walk8R);
         }
         else if(frame == 9)
         {
-            setImage(walk9);
+            setImage(P1_walk9R);
         }
         else if(frame == 10)
         {
-            setImage(walk10);
+            setImage(P1_walk10R);
         }
         else if(frame == 11)
         {
-            setImage(walk11);
+            setImage(P1_walk11R);
             frame = 1;
             return;
         }
