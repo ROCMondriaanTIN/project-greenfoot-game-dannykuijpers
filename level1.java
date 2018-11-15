@@ -59,12 +59,13 @@ public class Level1 extends World
         addObject(hero, 400, 700);
         addObject(new Slak(), 1470, 885);
         addObject(new Slak(), 1100, 885);
-        addObject(new CoinSilver(), 1040, 740);
-        addObject(new CoinSilver(), 1760, 740);
-        addObject(new CoinSilver(), 3260, 920);
-        addObject(new CoinSilver(), 4160, 680);
-        addObject(new CoinSilver(), 4890, 750);
-        // hoogte/breedte * 60 + 20
+        addObject(new CoinSilver(), 1050, 750);
+        addObject(new CoinSilver(), 1770, 750);
+        addObject(new CoinSilver(), 3270, 930);
+        addObject(new CoinSilver(), 4170, 690);
+        addObject(new CoinSilver(), 4900, 750);
+        addObject(new CoinGold(), 5190, 870);
+        // hoogte/breedte * 60 + 30
         
 
         // Initialiseren van de CollisionEngine zodat de speler niet door de tile heen kan lopen.
