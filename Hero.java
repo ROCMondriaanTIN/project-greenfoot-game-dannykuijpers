@@ -13,6 +13,7 @@ public class Hero extends Mover {
     int oldY;
     boolean canJump = true;
     
+    
     private GreenfootImage P1_walk1R = new GreenfootImage("p1_walk01.png");
     private GreenfootImage P1_walk2R = new GreenfootImage("p1_walk02.png");
     private GreenfootImage P1_walk3R = new GreenfootImage("p1_walk03.png");
@@ -65,6 +66,7 @@ public class Hero extends Mover {
                 return;
             }
         }
+        
         
         if (oldY < getY() || oldY > getY()){
             canJump = false;

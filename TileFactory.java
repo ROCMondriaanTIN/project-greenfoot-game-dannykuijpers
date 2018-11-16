@@ -1,4 +1,5 @@
 
+
 /**
  *
  * @author R. Springer
@@ -87,7 +88,7 @@ public class TileFactory {
                 break;
            case 24:
                 tile = new Tile("liquidWater.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
-                break; 
+                break;
            case 25:
                 tile = new Tile("liquidWaterTop_mid.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
                 break;
