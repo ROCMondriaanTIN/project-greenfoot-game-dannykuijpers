@@ -59,14 +59,6 @@ public class Hero extends Mover {
             velocityY = gravity;
         }
         applyVelocity();
-
-        for (Actor enemy : getIntersectingObjects(Slak.class)) {
-            if (enemy != null) {
-                getWorld().removeObject(this);
-                return;
-            }
-        }
-        
         
         if (oldY < getY() || oldY > getY()){
             canJump = false;
@@ -92,7 +84,7 @@ public class Hero extends Mover {
             velocityX = 5;
             animateright();
         }
-        if (Greenfoot.isKeyDown("down")){
+        else if (Greenfoot.isKeyDown("down")){
             animateduck();
         }
     }

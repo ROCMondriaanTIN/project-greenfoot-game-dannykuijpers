@@ -58,6 +58,7 @@ public class Testlevel extends World
         addObject(camera, 0, 0);
         addObject(hero, 400, 700);
         addObject(new Door_closedMid(), 1050, 810);
+        //addObject(new Slak(), 600, 800);
         // hoogte/breedte * 60 + 30
         
 

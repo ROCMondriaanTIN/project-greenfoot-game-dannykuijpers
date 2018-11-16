@@ -57,7 +57,7 @@ public class Level1 extends World
         // Alle objecten toevoegen aan de wereld: camera, main karakter en mogelijke enemies
         addObject(camera, 0, 0);
         addObject(hero, 400, 700);
-        //addObject(new Slak(), 1470, 885);
+        addObject(new Slak(), 1470, 885);
         //addObject(new Slak(), 1100, 885);
         addObject(new CoinSilver(), 1050, 750);
         addObject(new CoinSilver(), 1770, 750);

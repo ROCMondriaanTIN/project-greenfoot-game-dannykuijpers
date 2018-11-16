@@ -15,10 +15,19 @@ public class Slak extends Mover
         walkRange = 260;
         firstAct = true;
         speed = 1;
+       
     }
 
     @Override
     public void act() {
+        for (Actor enemy : getIntersectingObjects(Hero.class)) {
+            if (enemy != null){
+                if (getWorld() instanceof Level1) Greenfoot.setWorld(new Level1());
+                if (getWorld() instanceof Testlevel) Greenfoot.setWorld(new Testlevel());
+                return;
+            }
+        }
+        
         int x = getX();
         int y = getY();
 
