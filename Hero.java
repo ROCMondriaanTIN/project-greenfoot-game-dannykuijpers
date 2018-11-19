@@ -69,7 +69,6 @@ public class Hero extends Mover {
         if(Greenfoot.isKeyDown("up") == false) oldY = getY();
     }
     
-
     
     public void handleInput() {
         if (Greenfoot.isKeyDown("up") && canJump == true){

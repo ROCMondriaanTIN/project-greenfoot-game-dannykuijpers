@@ -22,7 +22,7 @@ public class StartScreen extends World
 
     public void act(){
         if(Greenfoot.isKeyDown("enter"))
-            Greenfoot.setWorld(new Level1());
+            Greenfoot.setWorld(new LevelSelect());
     }
 
     /**
