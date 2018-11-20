@@ -11,13 +11,10 @@ public class Door_closedMid extends Mover
    
    public void act() 
    {
-    for (Actor enemy : getIntersectingObjects(Hero.class)) {
-           if (enemy != null){
-                if (getWorld() instanceof Level1) Greenfoot.setWorld(new LevelSelect());
-                if (getWorld() instanceof Level2) Greenfoot.setWorld(new LevelSelect());
-                return;
-           }
-    }
-    applyVelocity();
+       if(getOneIntersectingObject(Hero.class)!= null && getWorld().getObjects(KeyBlue.class).isEmpty())
+        {
+            Greenfoot.setWorld(new LevelSelect());
+        }
+       applyVelocity();
    }    
 }
