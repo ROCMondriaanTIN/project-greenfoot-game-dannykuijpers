@@ -8,7 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Door_closedMid extends Mover
 {
-   
    public void act() 
    {
        if(getOneIntersectingObject(Hero.class)!= null && getWorld().getObjects(KeyBlue.class).isEmpty())
