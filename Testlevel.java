@@ -13,12 +13,12 @@ public class Testlevel extends World
      * Constructor for objects of class level1.
      * 
      */
+    
     public Testlevel()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 800, 1, false);
         this.setBackground("bg.png");
-
         int[][] map = {
         {-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1},
         {-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1},
@@ -82,5 +82,15 @@ public class Testlevel extends World
      */
     private void prepare()
     {
+        Counter counter = new Counter();
+        addObject(counter,70,83);
+        counter.setLocation(57,22);
+        counter.setLocation(59,20);
+        counter.setLocation(94,34);
+        counter.setLocation(74,20);
+        Counter counter2 = new Counter();
+        addObject(counter2,859,402);
+        counter2.setLocation(775,405);
+        removeObject(counter2);
     }
 }

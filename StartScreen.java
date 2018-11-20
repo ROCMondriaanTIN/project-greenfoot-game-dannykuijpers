@@ -25,6 +25,7 @@ public class StartScreen extends World
             Greenfoot.setWorld(new LevelSelect());
     }
 
+    //
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.

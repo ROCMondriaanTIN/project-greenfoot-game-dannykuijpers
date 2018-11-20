@@ -38,7 +38,7 @@ public class Mover extends Actor {
             hasCamera = false;
         }
     }
-
+    
     /**
      * Apply change in position based on velocityX and velocityY
      */
