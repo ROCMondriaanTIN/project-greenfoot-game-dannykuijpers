@@ -3,13 +3,13 @@ import greenfoot.Color;
 
 public class Counter extends Actor
 {
-    int score = 0;
-    public Counter() 
+    static int score = 0;
+    public void act() 
     {
         setImage(new GreenfootImage("silver coins : "+ score, 24, Color.WHITE, Color.BLACK));
     }
     
     public void addScore(){
-        score ++;
+        score += 1;
     }
 }

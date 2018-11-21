@@ -25,5 +25,7 @@ public class LevelSelect extends World
             Greenfoot.setWorld(new Level2());
         if(Greenfoot.isKeyDown("3"))
             Greenfoot.setWorld(new Level3());
+        if(Greenfoot.isKeyDown("0"))
+            Greenfoot.setWorld(new Testlevel());
         }
 }
