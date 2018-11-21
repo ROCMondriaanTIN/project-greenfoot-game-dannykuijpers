@@ -69,6 +69,7 @@ public class Level1 extends World
         addObject(new GemBlue(), 4410, 450);
         addObject(new Door_closedMid(), 5310, 865);
         addObject(new Door_closedTop(), 5310, 805);
+        addObject(new Slak(), 2490, 945);
         // hoogte/breedte * 60 + 30
         
 

@@ -9,10 +9,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Testlevel extends World
 {
     private CollisionEngine ce;
-    /**
-     * Constructor for objects of class level1.
-     * 
-     */
+    Counter counter = new Counter();
+    
+    
     
     public Testlevel()
     {    
@@ -55,9 +54,12 @@ public class Testlevel extends World
         camera.follow(hero);
 
         // Alle objecten toevoegen aan de wereld: camera, main karakter en mogelijke enemies
+        
+        addObject(counter, 100,40);
         addObject(camera, 0, 0);
         addObject(hero, 400, 700);
         addObject(new Door_closedMid(), 1050, 810);
+        addObject(new CoinSilver(), 500, 810);
         //addObject(new Slak(), 600, 800);
         // hoogte/breedte * 60 + 30
         
@@ -71,6 +73,10 @@ public class Testlevel extends World
         prepare();
     }
 
+    public Counter getCounter(){
+        return counter;
+    }
+    
     @Override
     public void act() {
         ce.update();
@@ -92,5 +98,8 @@ public class Testlevel extends World
         addObject(counter2,859,402);
         counter2.setLocation(775,405);
         removeObject(counter2);
+        KeyBlue keyBlue = new KeyBlue();
+        addObject(keyBlue,677,652);
+        removeObject(counter);
     }
 }

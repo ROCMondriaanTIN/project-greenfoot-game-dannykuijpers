@@ -63,8 +63,8 @@ public class Level2 extends World
         addObject(new CoinSilver(), 3630, 870);
         addObject(new CoinSilver(), 4830, 870);
         addObject(new CoinGold(), 5670, 870);
-        addObject(new KeyGreen(), 5190, 870);
-        addObject(new GemGreen(), 2310, 930);
+        addObject(new KeyBlue(), 5190, 870);
+        addObject(new GemBlue(), 2310, 930);
         addObject(new Door_closedMid(), 5910, 865);
         addObject(new Door_closedTop(), 5910, 805);
         // hoogte/breedte * 60 + 30
