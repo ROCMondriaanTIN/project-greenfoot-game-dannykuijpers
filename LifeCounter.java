@@ -16,7 +16,8 @@ public class LifeCounter extends Actor
             lifes = 3;
         }
     }
-    public void gameover(){
-        Greenfoot.setWorld(new StartScreen());
+    
+    public void extraleven(){
+        lifes ++;
     }
 }

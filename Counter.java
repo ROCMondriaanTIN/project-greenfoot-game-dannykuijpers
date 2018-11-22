@@ -4,9 +4,16 @@ import greenfoot.Color;
 public class Counter extends Actor
 {
     static int score = 0;
+    static int goldscore = 0;
+    LifeCounter test = new LifeCounter();
     public void act() 
     {
-        setImage(new GreenfootImage("munten: "+ score, 24, Color.BLACK, null));
+        setImage(new GreenfootImage("zilver: "+ score + " goud: " + goldscore, 24, Color.BLACK, null));
+        if (score + goldscore > 10){
+            test.extraleven();
+            score = 0;
+            goldscore = 0;
+        }
     }
     
     public void addSilverCoin(){
@@ -14,6 +21,7 @@ public class Counter extends Actor
     }
     
     public void addGoldCoin(){
-        score += 2;
+        goldscore += 2;
     }
+    
 }

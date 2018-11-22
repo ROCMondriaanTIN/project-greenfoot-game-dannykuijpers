@@ -55,7 +55,7 @@ public class Testlevel extends World
         // Alle objecten toevoegen aan de wereld: camera, main karakter en mogelijke enemies
         
         addObject(counter, 75, 30);
-        addObject(lifecounter, 71, 50);
+        addObject(lifecounter, 71, 70);
         addObject(camera, 0, 0);
         addObject(hero, 400, 700);
         //addObject(new Door_closedMid(), 1050, 810);
@@ -104,5 +104,21 @@ public class Testlevel extends World
         CoinGold coinGold = new CoinGold();
         addObject(coinGold,627,741);
         removeObject(coinGold);
+        CoinGold coinGold2 = new CoinGold();
+        addObject(coinGold2,459,649);
+        CoinGold coinGold3 = new CoinGold();
+        addObject(coinGold3,261,657);
+        CoinGold coinGold4 = new CoinGold();
+        addObject(coinGold4,523,578);
+        CoinSilver coinSilver = new CoinSilver();
+        addObject(coinSilver,302,691);
+        CoinSilver coinSilver2 = new CoinSilver();
+        addObject(coinSilver2,259,724);
+        CoinSilver coinSilver3 = new CoinSilver();
+        addObject(coinSilver3,201,699);
+        CoinSilver coinSilver4 = new CoinSilver();
+        addObject(coinSilver4,240,678);
+        CoinSilver coinSilver5 = new CoinSilver();
+        addObject(coinSilver5,296,654);
     }
 }
