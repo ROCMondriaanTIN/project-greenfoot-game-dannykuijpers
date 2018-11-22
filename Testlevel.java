@@ -10,6 +10,7 @@ public class Testlevel extends World
 {
     private CollisionEngine ce;
     Counter counter = new Counter();
+    LifeCounter lifecounter = new LifeCounter();
     
     public Testlevel()
     {    
@@ -54,11 +55,12 @@ public class Testlevel extends World
         // Alle objecten toevoegen aan de wereld: camera, main karakter en mogelijke enemies
         
         addObject(counter, 75, 30);
+        addObject(lifecounter, 71, 50);
         addObject(camera, 0, 0);
         addObject(hero, 400, 700);
-        addObject(new Door_closedMid(), 1050, 810);
-        addObject(new CoinSilver(), 500, 810);
-        //addObject(new Slak(), 600, 800);
+        //addObject(new Door_closedMid(), 1050, 810);
+       // addObject(new CoinSilver(), 500, 810);
+        addObject(new Slak(), 600, 800);
         // hoogte/breedte * 60 + 30
         
 
@@ -101,7 +103,6 @@ public class Testlevel extends World
         removeObject(counter);
         CoinGold coinGold = new CoinGold();
         addObject(coinGold,627,741);
-        Countercoin countercoin = new Countercoin();
-        addObject(countercoin,36,29);
+        removeObject(coinGold);
     }
 }

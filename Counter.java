@@ -6,7 +6,7 @@ public class Counter extends Actor
     static int score = 0;
     public void act() 
     {
-        setImage(new GreenfootImage("= "+ score, 24, Color.BLACK, null));
+        setImage(new GreenfootImage("munten: "+ score, 24, Color.BLACK, null));
     }
     
     public void addSilverCoin(){

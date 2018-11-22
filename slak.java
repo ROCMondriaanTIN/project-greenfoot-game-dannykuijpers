@@ -20,8 +20,11 @@ public class Slak extends Mover
 
     @Override
     public void act() {
+        setImage(new GreenfootImage("levens: "+ lifes, 24, Color.BLACK, null));
+        LifeCounter slak = new LifeCounter();
         for (Actor enemy : getIntersectingObjects(Hero.class)) {
             if (enemy != null){
+                slak.takelife();
                 if (getWorld() instanceof Level1) Greenfoot.setWorld(new Level1());
                 if (getWorld() instanceof Testlevel) Greenfoot.setWorld(new Testlevel());
                 return;
@@ -48,5 +51,18 @@ public class Slak extends Mover
             x = xMin;
             getImage().mirrorHorizontally();
         }
+        
+        
+    }
+    static int lifes = 3;
+    
+    public void takelife(){
+        lifes -= 1;
+        if (lifes < 0){
+            Greenfoot.setWorld(new StartScreen());
+        }
+    }
+    public void gameover(){
+        Greenfoot.setWorld(new StartScreen());
     }
 }
