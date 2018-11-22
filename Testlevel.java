@@ -53,7 +53,7 @@ public class Testlevel extends World
 
         // Alle objecten toevoegen aan de wereld: camera, main karakter en mogelijke enemies
         
-        addObject(counter, 100,40);
+        addObject(counter, 75, 30);
         addObject(camera, 0, 0);
         addObject(hero, 400, 700);
         addObject(new Door_closedMid(), 1050, 810);
@@ -99,5 +99,9 @@ public class Testlevel extends World
         KeyBlue keyBlue = new KeyBlue();
         addObject(keyBlue,677,652);
         removeObject(counter);
+        CoinGold coinGold = new CoinGold();
+        addObject(coinGold,627,741);
+        Countercoin countercoin = new Countercoin();
+        addObject(countercoin,36,29);
     }
 }

@@ -9,6 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Level1 extends World
 {
     private CollisionEngine ce;
+    Counter counter = new Counter();
+    
     /**
      * Constructor for objects of class level1.
      * 
@@ -70,6 +72,7 @@ public class Level1 extends World
         addObject(new Door_closedMid(), 5310, 865);
         addObject(new Door_closedTop(), 5310, 805);
         addObject(new Slak(), 2490, 945);
+        addObject(counter, 100,40);
         // hoogte/breedte * 60 + 30
         
 

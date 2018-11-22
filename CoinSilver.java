@@ -5,13 +5,11 @@ public class CoinSilver extends Mover
 
     public void act() 
     {
+        Counter CoinSilver = new Counter();
         for (Actor enemy : getIntersectingObjects(Hero.class)) {
             if (enemy != null) {
-                World myWorld = getWorld();
-                Testlevel testlevel = (Testlevel)myWorld;
-                //Counter counter = Testlevel.getCounter();
-                //counter.addScore();
                 getWorld().removeObject(this);
+                CoinSilver.addSilverCoin();
                 return;
             }
         }

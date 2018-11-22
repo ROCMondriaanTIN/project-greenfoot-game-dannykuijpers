@@ -11,9 +11,11 @@ public class CoinGold extends Mover
 
     public void act() 
     {
+        Counter CoinGold = new Counter();
          for (Actor enemy : getIntersectingObjects(Hero.class)) {
             if (enemy != null) {
                 getWorld().removeObject(this);
+                CoinGold.addGoldCoin();
                 return;
             }
         }

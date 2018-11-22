@@ -38,6 +38,7 @@ public class Hero extends Mover {
     private GreenfootImage P1_walk11L = new GreenfootImage("p1_walk11_mirrored.png");
     private GreenfootImage P1_jump = new GreenfootImage("p1_jump.png");
     private GreenfootImage P1_duck = new GreenfootImage("p1_duck.png");
+    private GreenfootImage P2_jump = new GreenfootImage("p2_jump.png");
     private int frame = 1;
 
 
@@ -51,7 +52,7 @@ public class Hero extends Mover {
 
     @Override
     public void act() {
-        handleInput();
+        handleInputP1();
         
         velocityX *= drag;
         velocityY += acc;
@@ -69,8 +70,7 @@ public class Hero extends Mover {
         if(Greenfoot.isKeyDown("up") == false) oldY = getY();
     }
     
-    
-    public void handleInput() {
+    public void handleInputP1() {
         if (Greenfoot.isKeyDown("up") && canJump == true){
             velocityY = -15;
             animatejump();
@@ -95,7 +95,7 @@ public class Hero extends Mover {
     public void animatejump(){
         setImage(P1_jump);
     }
-    
+     
     public void animateleft(){
         if(frame == 1)
         {
