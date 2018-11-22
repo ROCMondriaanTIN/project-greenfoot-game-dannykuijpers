@@ -60,7 +60,7 @@ public class Testlevel extends World
         addObject(hero, 400, 700);
         //addObject(new Door_closedMid(), 1050, 810);
        // addObject(new CoinSilver(), 500, 810);
-        addObject(new Slak(), 600, 800);
+        addObject(new Slak(), 600, 825);
         // hoogte/breedte * 60 + 30
         
 

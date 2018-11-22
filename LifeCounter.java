@@ -13,6 +13,7 @@ public class LifeCounter extends Actor
         lifes -= 1;
         if (lifes < 0){
             Greenfoot.setWorld(new StartScreen());
+            lifes = 3;
         }
     }
     public void gameover(){
