@@ -75,7 +75,7 @@ public class Hero extends Mover {
             velocityY = -15;
             animatejump();
         }
-        
+
         if (Greenfoot.isKeyDown("left")) {
             velocityX = -5;
             animateleft();

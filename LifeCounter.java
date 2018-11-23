@@ -3,7 +3,7 @@ import greenfoot.Color;
 
 public class LifeCounter extends Actor
 {
-    static int lifes = 3;
+    static int lifes = 2;
     public void act() 
     {
         setImage(new GreenfootImage("levens: "+ lifes, 24, Color.BLACK, null));
@@ -13,7 +13,7 @@ public class LifeCounter extends Actor
         lifes -= 1;
         if (lifes < 0){
             Greenfoot.setWorld(new StartScreen());
-            lifes = 3;
+            lifes = 2;
         }
     }
     

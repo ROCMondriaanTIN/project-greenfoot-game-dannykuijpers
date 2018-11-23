@@ -25,6 +25,7 @@ public class Slak extends Mover
         for (Actor enemy : getIntersectingObjects(Hero.class)) {
             if (enemy != null){
                 if (getWorld() instanceof Level1) Greenfoot.setWorld(new Level1());
+                if (getWorld() instanceof Level2) Greenfoot.setWorld(new Level2());
                 if (getWorld() instanceof Testlevel) Greenfoot.setWorld(new Testlevel());
                 return;
             }

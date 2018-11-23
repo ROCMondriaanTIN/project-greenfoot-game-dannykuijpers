@@ -9,6 +9,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Level2 extends World
 {
     private CollisionEngine ce;
+    Counter counter = new Counter();
+    LifeCounter lifecounter = new LifeCounter();
+    
     /**
      * Constructor for objects of class level1.
      * 
@@ -57,6 +60,9 @@ public class Level2 extends World
         // Alle objecten toevoegen aan de wereld: camera, main karakter en mogelijke enemies
         addObject(camera, 0, 0);
         addObject(hero, 400, 700);
+        addObject(counter, 900, 30);
+        addObject(lifecounter, 71, 30);
+        
         addObject(new CoinSilver(), 270, 810);
         addObject(new CoinSilver(), 1890, 690);
         addObject(new CoinSilver(), 2910, 570);
@@ -65,6 +71,9 @@ public class Level2 extends World
         addObject(new CoinGold(), 5670, 870);
         addObject(new KeyBlue(), 5190, 870);
         addObject(new GemBlue(), 2310, 930);
+        
+        addObject(new Slak(), 800, 810);
+        
         addObject(new Door_closedMid(), 5910, 865);
         addObject(new Door_closedTop(), 5910, 805);
         // hoogte/breedte * 60 + 30

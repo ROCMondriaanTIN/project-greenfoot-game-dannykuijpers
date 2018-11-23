@@ -54,13 +54,13 @@ public class Testlevel extends World
 
         // Alle objecten toevoegen aan de wereld: camera, main karakter en mogelijke enemies
         
-        addObject(counter, 75, 30);
-        addObject(lifecounter, 71, 70);
+        addObject(counter, 900, 30);
+        addObject(lifecounter, 71, 30);
         addObject(camera, 0, 0);
         addObject(hero, 400, 700);
         //addObject(new Door_closedMid(), 1050, 810);
        // addObject(new CoinSilver(), 500, 810);
-        addObject(new Slak(), 600, 825);
+        addObject(new Slak(), 600, 822);
         // hoogte/breedte * 60 + 30
         
 
