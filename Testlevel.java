@@ -60,7 +60,7 @@ public class Testlevel extends World
         addObject(hero, 400, 700);
         //addObject(new Door_closedMid(), 1050, 810);
        // addObject(new CoinSilver(), 500, 810);
-        addObject(new Slak(), 600, 822);
+        addObject(new Testvijand(), 600, 822);
         // hoogte/breedte * 60 + 30
         
 
@@ -120,5 +120,14 @@ public class Testlevel extends World
         addObject(coinSilver4,240,678);
         CoinSilver coinSilver5 = new CoinSilver();
         addObject(coinSilver5,296,654);
+        removeObject(coinSilver4);
+        removeObject(coinSilver5);
+        removeObject(coinGold3);
+        removeObject(coinSilver);
+        removeObject(coinSilver2);
+        removeObject(coinSilver3);
+        removeObject(coinGold2);
+        removeObject(coinGold4);
+        removeObject(keyBlue);
     }
 }

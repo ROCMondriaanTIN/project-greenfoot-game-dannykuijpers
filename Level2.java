@@ -72,7 +72,7 @@ public class Level2 extends World
         addObject(new KeyBlue(), 5190, 870);
         addObject(new GemBlue(), 2310, 930);
         
-        addObject(new Slak(), 800, 810);
+        //addObject(new Slak(), 800, 810);
         
         addObject(new Door_closedMid(), 5910, 865);
         addObject(new Door_closedTop(), 5910, 805);

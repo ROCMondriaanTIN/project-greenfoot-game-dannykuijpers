@@ -12,7 +12,7 @@ public class LifeCounter extends Actor
     public void takelife(){
         lifes -= 1;
         if (lifes < 0){
-            Greenfoot.setWorld(new StartScreen());
+            Greenfoot.setWorld(new Gameover());
             lifes = 2;
         }
     }

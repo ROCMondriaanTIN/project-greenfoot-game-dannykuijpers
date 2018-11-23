@@ -12,6 +12,7 @@ public class Hero extends Mover {
     private final double drag;
     int oldY;
     boolean canJump = true;
+    //Testvijand test = new Testvijand();
     
     
     private GreenfootImage P1_walk1R = new GreenfootImage("p1_walk01.png");
@@ -68,6 +69,11 @@ public class Hero extends Mover {
             canJump = true;
         }
         if(Greenfoot.isKeyDown("up") == false) oldY = getY();
+        //for (Actor enemy : getIntersectingObjects(Testvijand.class)) {
+            //if (canJump = false){
+               //test.die();
+            //}
+        //}
     }
     
     public void handleInputP1() {
