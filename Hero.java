@@ -74,6 +74,17 @@ public class Hero extends Mover {
                //test.die();
             //}
         //}
+        LifeCounter water = new LifeCounter();
+        for(Actor liquidWater: getIntersectingObjects(TileExtended.class)){
+            TileExtended tile = (TileExtended) liquidWater;
+            if(tile != null && tile.type == "water"){
+                if (getWorld() instanceof Level1) Greenfoot.setWorld(new Level1());
+                if (getWorld() instanceof Level2) Greenfoot.setWorld(new Level2());
+                water.takelife();
+                break;
+            }
+        }
+        
     }
     
     public void handleInputP1() {
