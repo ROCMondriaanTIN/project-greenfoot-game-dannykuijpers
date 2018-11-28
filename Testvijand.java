@@ -18,6 +18,10 @@ public class Testvijand extends Mover
        
     }
 
+        public void die(){
+             getWorld().removeObject(this);  
+    }
+    
     @Override
     public void act() {
         //setImage(new GreenfootImage("levens: "+ lifes, 24, Color.BLACK, null));
@@ -55,15 +59,10 @@ public class Testvijand extends Mover
         if(isTouching(Hero.class)) Testvijand.takelife();
     }
    
-        public void die(){
-             getWorld().removeObject(this);  
+    public void collisionDetection(){
+      Actor Hero = getOneIntersectingObject(Hero.class);
+      if ((Hero != null) && (Hero.getY() >= this.getY()-10)){
+           getWorld().removeObject(this);  
+      }
     }
-   
-    //public void collisionDetection(){
-       //Actor Hero = getOneIntersectingObject(Hero.class);
-       //if ((Hero != null) && (Hero.getY() >= this.getY()-10) )
-       //{
-           //getWorld().removeObject(this);  
-      //}
-    //}
 }

@@ -12,7 +12,7 @@ public class Hero extends Mover {
     private final double drag;
     int oldY;
     boolean canJump = true;
-    //Testvijand test = new Testvijand();
+    Testvijand test = new Testvijand();
     
     
     private GreenfootImage P1_walk1R = new GreenfootImage("p1_walk01.png");
@@ -54,7 +54,10 @@ public class Hero extends Mover {
     @Override
     public void act() {
         handleInputP1();
-        
+        if (Greenfoot.mousePressed(Character2.class) == true){
+            
+        handleInputP2();
+        }
         velocityX *= drag;
         velocityY += acc;
         if (velocityY > gravity) {
@@ -69,11 +72,11 @@ public class Hero extends Mover {
             canJump = true;
         }
         if(Greenfoot.isKeyDown("up") == false) oldY = getY();
-        //for (Actor enemy : getIntersectingObjects(Testvijand.class)) {
-            //if (canJump = false){
-               //test.die();
-            //}
-        //}
+        for (Actor enemy : getIntersectingObjects(Testvijand.class)) {
+            if (canJump = false){
+               test.die();
+            }
+        }
         LifeCounter water = new LifeCounter();
         for(Actor liquidWater: getIntersectingObjects(TileExtended.class)){
             TileExtended tile = (TileExtended) liquidWater;
@@ -84,13 +87,12 @@ public class Hero extends Mover {
                 break;
             }
         }
-        
     }
     
-    public void handleInputP1() {
+    public void handleInputP2(){
         if (Greenfoot.isKeyDown("up") && canJump == true){
             velocityY = -15;
-            animatejump();
+            animatejumpP2();
         }
 
         if (Greenfoot.isKeyDown("left")) {
@@ -105,10 +107,10 @@ public class Hero extends Mover {
         }
     }
     
-    public void handleInputP2() {
+    public void handleInputP1() {
         if (Greenfoot.isKeyDown("up") && canJump == true){
             velocityY = -15;
-            animatejumpP2();
+            animatejump();
         }
 
         if (Greenfoot.isKeyDown("left")) {
