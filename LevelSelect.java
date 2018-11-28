@@ -37,7 +37,5 @@ public class LevelSelect extends World
      */
     private void prepare()
     {
-        Character2 character2 = new Character2();
-        addObject(character2,726,424);
     }
 }
