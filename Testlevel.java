@@ -58,9 +58,10 @@ public class Testlevel extends World
         addObject(lifecounter, 71, 30);
         addObject(camera, 0, 0);
         addObject(hero, 400, 700);
+        addObject(new Charactercoin2(), 700, 700);
         //addObject(new Door_closedMid(), 1050, 810);
-       // addObject(new CoinSilver(), 500, 810);
-        addObject(new Testvijand(), 600, 822);
+        // addObject(new CoinSilver(), 500, 810);
+        //addObject(new Testvijand(), 600, 822);
         // hoogte/breedte * 60 + 30
         
 
@@ -129,5 +130,15 @@ public class Testlevel extends World
         removeObject(coinGold2);
         removeObject(coinGold4);
         removeObject(keyBlue);
+        Charactercoin2 charactercoin2 = new Charactercoin2();
+        addObject(charactercoin2,888,553);
+        charactercoin2.setLocation(839,686);
+        charactercoin2.setLocation(750,685);
+        charactercoin2.setLocation(706,726);
+        removeObject(charactercoin2);
+
+        addObject(charactercoin2,796,673);
+        Charactercoin1 charactercoin1 = new Charactercoin1();
+        addObject(charactercoin1,632,639);
     }
 }

@@ -41,6 +41,7 @@ public class Hero extends Mover {
     private GreenfootImage P1_duck = new GreenfootImage("p1_duck.png");
     private GreenfootImage P2_jump = new GreenfootImage("p2_jump.png");
     private int frame = 1;
+    public int waardeCoin = 1;
 
 
     public Hero() {
@@ -105,30 +106,12 @@ public class Hero extends Mover {
         }
     }
     
-    public void handleInputP2() {
-        if (Greenfoot.isKeyDown("up") && canJump == true){
-            velocityY = -15;
-            animatejumpP2();
-        }
-
-        if (Greenfoot.isKeyDown("left")) {
-            velocityX = -5;
-            animateleft();
-        } else if (Greenfoot.isKeyDown("right")) {
-            velocityX = 5;
-            animateright();
-        }
-        else if (Greenfoot.isKeyDown("down")){
-            animateduck();
-        }
-    }
-    
     public void animateduck(){
         setImage(P1_duck);
     }
     
     public void animatejump(){
-        setImage(P1_jump);
+        setImage("p" + waardeCoin + "_jump.png");
     }
      
     public void animatejumpP2(){
@@ -233,6 +216,22 @@ public class Hero extends Mover {
             return;
         }
         frame ++;
+    }
+    
+    public void charactercoin1(){
+        if(isTouching(Charactercoin1.class)){
+            waardeCoin = 1;
+        }
+    }
+    
+    public void charactercoin2(){
+        waardeCoin = 2;
+    }
+    
+    public void charactercoin3(){
+        if(isTouching(Charactercoin3.class)){
+            waardeCoin = 3;
+        }
     }
     
     public int getWidth() {
