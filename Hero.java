@@ -13,35 +13,9 @@ public class Hero extends Mover {
     int oldY;
     boolean canJump = true;
     //Testvijand test = new Testvijand();
-    
-    
-    private GreenfootImage P1_walk1R = new GreenfootImage("p1_walk01.png");
-    private GreenfootImage P1_walk2R = new GreenfootImage("p1_walk02.png");
-    private GreenfootImage P1_walk3R = new GreenfootImage("p1_walk03.png");
-    private GreenfootImage P1_walk4R = new GreenfootImage("p1_walk04.png");
-    private GreenfootImage P1_walk5R = new GreenfootImage("p1_walk05.png");
-    private GreenfootImage P1_walk6R = new GreenfootImage("p1_walk06.png");
-    private GreenfootImage P1_walk7R = new GreenfootImage("p1_walk07.png");
-    private GreenfootImage P1_walk8R = new GreenfootImage("p1_walk08.png");
-    private GreenfootImage P1_walk9R = new GreenfootImage("p1_walk09.png");
-    private GreenfootImage P1_walk10R = new GreenfootImage("p1_walk10.png");
-    private GreenfootImage P1_walk11R = new GreenfootImage("p1_walk11.png");
-    private GreenfootImage P1_walk1L = new GreenfootImage("p1_walk01_mirrored.png");
-    private GreenfootImage P1_walk2L = new GreenfootImage("p1_walk02_mirrored.png");
-    private GreenfootImage P1_walk3L = new GreenfootImage("p1_walk03_mirrored.png");
-    private GreenfootImage P1_walk4L = new GreenfootImage("p1_walk04_mirrored.png");
-    private GreenfootImage P1_walk5L = new GreenfootImage("p1_walk05_mirrored.png");
-    private GreenfootImage P1_walk6L = new GreenfootImage("p1_walk06_mirrored.png");
-    private GreenfootImage P1_walk7L = new GreenfootImage("p1_walk07_mirrored.png");
-    private GreenfootImage P1_walk8L = new GreenfootImage("p1_walk08_mirrored.png");
-    private GreenfootImage P1_walk9L = new GreenfootImage("p1_walk09_mirrored.png");
-    private GreenfootImage P1_walk10L = new GreenfootImage("p1_walk10_mirrored.png");
-    private GreenfootImage P1_walk11L = new GreenfootImage("p1_walk11_mirrored.png");
-    private GreenfootImage P1_jump = new GreenfootImage("p1_jump.png");
-    private GreenfootImage P1_duck = new GreenfootImage("p1_duck.png");
     private int frame = 1;
     static int waardeCoin = 1;
-    int blueCoin = 0;
+    private int blueCoin = 0;
     private int greenCoin = 0;
     private int pinkCoin = 0;
 
