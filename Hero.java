@@ -39,9 +39,11 @@ public class Hero extends Mover {
     private GreenfootImage P1_walk11L = new GreenfootImage("p1_walk11_mirrored.png");
     private GreenfootImage P1_jump = new GreenfootImage("p1_jump.png");
     private GreenfootImage P1_duck = new GreenfootImage("p1_duck.png");
-    private GreenfootImage P2_jump = new GreenfootImage("p2_jump.png");
     private int frame = 1;
-    public int waardeCoin = 1;
+    static int waardeCoin = 1;
+    private int blueCoin = 0;
+    private int greenCoin = 0;
+    private int pinkCoin = 0;
 
 
     public Hero() {
@@ -55,6 +57,9 @@ public class Hero extends Mover {
     @Override
     public void act() {
         handleInputP1();
+        blueCoin();
+        //greenCoin();
+       // pinkCoin();
         
         velocityX *= drag;
         velocityY += acc;
@@ -88,6 +93,14 @@ public class Hero extends Mover {
         
     }
     
+    public void blueCoin() {
+        if(isTouching(Bluecoin.class)) {
+            waardeCoin = 2;
+            removeTouching(Bluecoin.class);
+        }
+    }
+
+    
     public void handleInputP1() {
         if (Greenfoot.isKeyDown("up") && canJump == true){
             velocityY = -15;
@@ -113,10 +126,6 @@ public class Hero extends Mover {
     public void animatejump(){
         setImage("p" + waardeCoin + "_jump.png");
     }
-     
-    public void animatejumpP2(){
-        setImage(P2_jump);
-    }
     
     public void animateleft(){
         if(frame == 1)
@@ -125,7 +134,7 @@ public class Hero extends Mover {
         }
         else if(frame == 2)
         {
-            setImage(P1_walk2L);
+             setImage(P1_walk2L);
         }
         else if(frame == 3)
         {
@@ -171,69 +180,54 @@ public class Hero extends Mover {
     public void animateright(){
         if(frame == 1)
         { 
-            setImage(P1_walk1R);
+            setImage("p"+waardeCoin+"_walk01.png" );
         }
         else if(frame == 2)
         {
-            setImage(P1_walk2R);
+            setImage("p"+waardeCoin+"_walk02.png");
         }
         else if(frame == 3)
         {
-            setImage(P1_walk3R);
+            setImage("p"+waardeCoin+"_walk03.png");
         }
         else if(frame == 4)
         {
-            setImage(P1_walk4R);
+            setImage("p"+waardeCoin+"_walk04.png");
         }
         else if(frame == 5)
         {
-            setImage(P1_walk5R);
+            setImage("p"+waardeCoin+"_walk05.png");
         }
         else if(frame == 6)
         {
-            setImage(P1_walk6R);
+            setImage("p"+waardeCoin+"_walk06.png");
         }
         else if(frame == 7)
         {
-            setImage(P1_walk7R);
+            setImage("p"+waardeCoin+"_walk07.png");
         }
         else if(frame == 8)
         {
-            setImage(P1_walk8R);
+            setImage("p"+waardeCoin+"_walk08.png");
         }
         else if(frame == 9)
         {
-            setImage(P1_walk9R);
+            setImage("p"+waardeCoin+"_walk09.png");
         }
         else if(frame == 10)
         {
-            setImage(P1_walk10R);
+            setImage("p"+waardeCoin+"_walk10.png");
         }
         else if(frame == 11)
         {
-            setImage(P1_walk11R);
+            setImage("p"+waardeCoin+"_walk11.png");
             frame = 1;
             return;
         }
         frame ++;
     }
     
-    public void charactercoin1(){
-        if(isTouching(Charactercoin1.class)){
-            waardeCoin = 1;
-        }
-    }
-    
-    public void charactercoin2(){
-        waardeCoin = 2;
-    }
-    
-    public void charactercoin3(){
-        if(isTouching(Charactercoin3.class)){
-            waardeCoin = 3;
-        }
-    }
-    
+
     public int getWidth() {
         return getImage().getWidth();
     }
