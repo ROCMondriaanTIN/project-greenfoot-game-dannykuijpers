@@ -41,7 +41,7 @@ public class Hero extends Mover {
     private GreenfootImage P1_duck = new GreenfootImage("p1_duck.png");
     private int frame = 1;
     static int waardeCoin = 1;
-    private int blueCoin = 0;
+    int blueCoin = 0;
     private int greenCoin = 0;
     private int pinkCoin = 0;
 
@@ -58,8 +58,8 @@ public class Hero extends Mover {
     public void act() {
         handleInputP1();
         blueCoin();
-        //greenCoin();
-       // pinkCoin();
+        greenCoin();
+        pinkCoin();
         
         velocityX *= drag;
         velocityY += acc;
@@ -75,11 +75,7 @@ public class Hero extends Mover {
             canJump = true;
         }
         if(Greenfoot.isKeyDown("up") == false) oldY = getY();
-        //for (Actor enemy : getIntersectingObjects(Testvijand.class)) {
-            //if (canJump = false){
-               //test.die();
-            //}
-        //}
+
         LifeCounter water = new LifeCounter();
         for(Actor liquidWater: getIntersectingObjects(TileExtended.class)){
             TileExtended tile = (TileExtended) liquidWater;
@@ -97,6 +93,20 @@ public class Hero extends Mover {
         if(isTouching(Bluecoin.class)) {
             waardeCoin = 2;
             removeTouching(Bluecoin.class);
+        }
+    }
+    
+    public void greenCoin() {
+        if(isTouching(Greencoin.class)) {
+            waardeCoin = 1;
+            removeTouching(Greencoin.class);
+        }
+    }
+    
+    public void pinkCoin() {
+        if(isTouching(Pinkcoin.class)) {
+            waardeCoin = 3;
+            removeTouching(Pinkcoin.class);
         }
     }
 
@@ -130,47 +140,47 @@ public class Hero extends Mover {
     public void animateleft(){
         if(frame == 1)
         {
-            setImage(P1_walk1L);
+            setImage("p"+waardeCoin+"_walk01_mirrored.png");
         }
         else if(frame == 2)
         {
-             setImage(P1_walk2L);
+             setImage("p"+waardeCoin+"_walk02_mirrored.png");
         }
         else if(frame == 3)
         {
-            setImage(P1_walk3L);
+            setImage("p"+waardeCoin+"_walk03_mirrored.png");
         }
         else if(frame == 4)
         {
-            setImage(P1_walk4L);
+            setImage("p"+waardeCoin+"_walk04_mirrored.png");
         }
         else if(frame == 5)
         {
-            setImage(P1_walk5L);
+            setImage("p"+waardeCoin+"_walk05_mirrored.png");
         }
         else if(frame == 6)
         {
-            setImage(P1_walk6L);
+            setImage("p"+waardeCoin+"_walk06_mirrored.png");
         }
         else if(frame == 7)
         {
-            setImage(P1_walk7L);
+            setImage("p"+waardeCoin+"_walk07_mirrored.png");
         }
         else if(frame == 8)
         {
-            setImage(P1_walk8L);
+            setImage("p"+waardeCoin+"_walk08_mirrored.png");
         }
         else if(frame == 9)
         {
-            setImage(P1_walk9L);
+            setImage("p"+waardeCoin+"_walk09_mirrored.png");
         }
         else if(frame == 10)
         {
-            setImage(P1_walk10L);
+            setImage("p"+waardeCoin+"_walk10_mirrored.png");
         }
         else if(frame == 11)
         {
-            setImage(P1_walk11L);
+            setImage("p"+waardeCoin+"_walk11_mirrored.png");
             frame = 1;
             return;
         }

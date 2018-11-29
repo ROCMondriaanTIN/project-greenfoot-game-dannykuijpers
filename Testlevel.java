@@ -130,10 +130,11 @@ public class Testlevel extends World
         removeObject(coinGold2);
         removeObject(coinGold4);
         removeObject(keyBlue);
-        
-        
+
        
         Bluecoin bluecoin = new Bluecoin();
         addObject(bluecoin,850,751);
+        Pinkcoin pinkcoin = new Pinkcoin();
+        addObject(pinkcoin,581,753);
     }
 }

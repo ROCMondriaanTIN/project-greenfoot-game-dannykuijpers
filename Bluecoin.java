@@ -21,5 +21,5 @@ public class Bluecoin extends Mover
           }    
       }
        applyVelocity();
-    }    
+   }    
 }
