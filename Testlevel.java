@@ -58,7 +58,7 @@ public class Testlevel extends World
         addObject(lifecounter, 71, 30);
         addObject(camera, 0, 0);
         addObject(hero, 400, 700);
-        
+        addObject(new Pinkcoin(), 1110, 930);
         //addObject(new Door_closedMid(), 1050, 810);
         // addObject(new CoinSilver(), 500, 810);
         //addObject(new Testvijand(), 600, 822);

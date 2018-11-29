@@ -51,14 +51,14 @@ public class Hero extends Mover {
         gravity = 9.8;
         acc = 0.6;
         drag = 0.8;
-        setImage("p1.png");
+        setImage("p" + waardeCoin + ".png");
     }
 
     @Override
     public void act() {
         handleInputP1();
-        blueCoin();
         greenCoin();
+        blueCoin();
         pinkCoin();
         
         velocityX *= drag;
@@ -89,17 +89,17 @@ public class Hero extends Mover {
         
     }
     
-    public void blueCoin() {
-        if(isTouching(Bluecoin.class)) {
-            waardeCoin = 2;
-            removeTouching(Bluecoin.class);
-        }
-    }
-    
     public void greenCoin() {
         if(isTouching(Greencoin.class)) {
             waardeCoin = 1;
             removeTouching(Greencoin.class);
+        }
+    }
+    
+    public void blueCoin() {
+        if(isTouching(Bluecoin.class)) {
+            waardeCoin = 2;
+            //removeTouching(Bluecoin.class);
         }
     }
     
@@ -130,7 +130,7 @@ public class Hero extends Mover {
     }
     
     public void animateduck(){
-        setImage(P1_duck);
+        setImage("p"+ waardeCoin +"_duck.png");
     }
     
     public void animatejump(){

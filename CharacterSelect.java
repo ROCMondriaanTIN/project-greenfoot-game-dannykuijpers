@@ -63,7 +63,9 @@ public class CharacterSelect extends World
         addObject(counter, 900, 30);
         addObject(lifecounter, 71, 30);
         
-        addObject(new Bluecoin(), 90, 930);
+        addObject(new Bluecoin(), 570, 930);
+        addObject(new Greencoin(), 90, 930);
+        addObject(new Pinkcoin(), 1110, 930);
         
         addObject(new Door_closedMid(), 570, 565);
         addObject(new Door_closedTop(), 570, 505);
@@ -78,7 +80,11 @@ public class CharacterSelect extends World
 
         prepare();
     }
-
+    
+    public Counter getCounter(){
+        return counter;
+    }
+    
     @Override
     public void act() {
         ce.update();
