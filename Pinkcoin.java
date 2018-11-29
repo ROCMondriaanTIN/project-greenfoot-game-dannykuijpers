@@ -13,13 +13,7 @@ public class Pinkcoin extends Mover
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
    public void act() 
-    {
-      for (Actor Bluecoin : getIntersectingObjects(Hero.class)){
-          if (Bluecoin != null) {
-              getWorld().removeObject(this);
-              break;
-          }    
-      }
+   {
        applyVelocity();
    }    
 }

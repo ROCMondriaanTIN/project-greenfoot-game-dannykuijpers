@@ -66,26 +66,35 @@ public class Hero extends Mover {
     public void greenCoin() {
         if(isTouching(Greencoin.class)) {
             waardeCoin = 1;
+            removeTouching(Greencoin.class);
         }
     }
     
     public void blueCoin() {
         if(isTouching(Bluecoin.class)) {
             waardeCoin = 2;
+            //removeTouching(Bluecoin.class);
         }
     }
     
     public void pinkCoin() {
         if(isTouching(Pinkcoin.class)) {
             waardeCoin = 3;
+            removeTouching(Pinkcoin.class);
         }
     }
 
+<<<<<<< HEAD
     
     public void handleInputP1() {
         if (Greenfoot.isKeyDown("up") && canJump == true){
             velocityY = -15;
             animatejump();
+=======
+    public void handleInput() {
+        if (Greenfoot.isKeyDown("w")) {
+            velocityY = -20;
+>>>>>>> 4372fff5ea53a9c16ee13c8083969eac7aeee2f9
         }
 
         if (Greenfoot.isKeyDown("left")) {
