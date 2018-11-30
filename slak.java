@@ -21,6 +21,7 @@ public class Slak extends Mover
     @Override
     public void act() {
         //setImage(new GreenfootImage("levens: "+ lifes, 24, Color.BLACK, null));
+        
         LifeCounter slak = new LifeCounter();
         for (Actor enemy : getIntersectingObjects(Hero.class)) {
             if (enemy != null){

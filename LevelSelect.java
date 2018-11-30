@@ -16,7 +16,7 @@ public class LevelSelect extends World
     public LevelSelect()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1100, 600, 1); 
+        super(620, 350, 1); 
         prepare();
     }
 
@@ -27,6 +27,8 @@ public class LevelSelect extends World
             Greenfoot.setWorld(new Level2());
         if(Greenfoot.isKeyDown("3"))
             Greenfoot.setWorld(new Level3());
+        if(Greenfoot.isKeyDown("4"))
+        Greenfoot.setWorld(new Level4());
         if(Greenfoot.isKeyDown("5"))
             Greenfoot.setWorld(new CharacterSelect());
         if(Greenfoot.isKeyDown("0"))

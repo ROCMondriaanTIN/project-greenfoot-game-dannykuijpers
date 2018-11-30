@@ -60,7 +60,6 @@ public class Hero extends Mover {
                 break;
             }
         }
-        
     }
     
     public void greenCoin() {
