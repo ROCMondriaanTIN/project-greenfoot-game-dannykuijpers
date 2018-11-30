@@ -27,6 +27,8 @@ public class Slak extends Mover
             if (enemy != null){
                 if (getWorld() instanceof Level1) Greenfoot.setWorld(new Level1());
                 if (getWorld() instanceof Level2) Greenfoot.setWorld(new Level2());
+                if (getWorld() instanceof Level3) Greenfoot.setWorld(new Level3());
+                if (getWorld() instanceof Level4) Greenfoot.setWorld(new Level4());
                 if (getWorld() instanceof Testlevel) Greenfoot.setWorld(new Testlevel());
                 return;
             }

@@ -82,12 +82,19 @@ public class Level4 extends World
         addObject(counter, 900, 30);
         addObject(lifecounter, 71, 30);
         
-        addObject(new Bluecoin(), 570, 930);
-        addObject(new Greencoin(), 90, 930);
-        addObject(new Pinkcoin(), 1110, 930);
+        addObject(new CoinSilver(), 1110, 630);
+        addObject(new CoinSilver(), 1170, 2190);
+        addObject(new CoinSilver(), 2550, 2190);
+        addObject(new CoinSilver(), 3570, 1590);
+        addObject(new CoinSilver(), 4170, 1950);
+        addObject(new CoinGold(), 1530, 630);
+        addObject(new KeyBlue(), 330, 2190);
+        addObject(new GemBlue(), 510, 1650);
         
-        //addObject(new Door_closedMid(), 570, 565);
-        addObject(new Door_closedTop(), 570, 505);
+        
+        
+        addObject(new Door_closedMid(), 4170, 1045);
+        addObject(new Door_closedTop(), 4170, 985);
         // hoogte/breedte * 60 + 30
         
 

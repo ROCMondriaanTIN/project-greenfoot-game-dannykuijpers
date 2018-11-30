@@ -56,6 +56,8 @@ public class Hero extends Mover {
             if(tile != null && tile.type == "water"){
                 if (getWorld() instanceof Level1) Greenfoot.setWorld(new Level1());
                 if (getWorld() instanceof Level2) Greenfoot.setWorld(new Level2());
+                if (getWorld() instanceof Level3) Greenfoot.setWorld(new Level3());
+                if (getWorld() instanceof Level4) Greenfoot.setWorld(new Level4());
                 water.takelife();
                 break;
             }
