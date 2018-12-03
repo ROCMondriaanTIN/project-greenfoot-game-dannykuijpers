@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class LevelSelect extends World
 {
-
+    GemBlue test = new GemBlue();
     /**
      * Constructor for objects of class LevelSelect.
      * 

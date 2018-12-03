@@ -91,7 +91,11 @@ public class Level4 extends World
         addObject(new KeyBlue(), 330, 2190);
         addObject(new GemBlue(), 510, 1650);
         
-        
+        addObject(new Slak(),890, 1305);
+        addObject(new Slak(), 3630, 2205);
+        addObject(new Slak(), 2190, 2205);
+        addObject(new Slak(), 570, 2205);
+        addObject(new Slak(), 3150, 1005);
         
         addObject(new Door_closedMid(), 4170, 1045);
         addObject(new Door_closedTop(), 4170, 985);
