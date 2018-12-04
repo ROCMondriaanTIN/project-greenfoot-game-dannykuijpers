@@ -57,7 +57,7 @@ public class GemBlue extends Mover
             Greenfoot.setWorld(new Level1());
         }
         else{
-            Greenfoot.setWorld(new Testlevel());
+            Greenfoot.setWorld(new Diamantloos());
         }
     }
 }
