@@ -8,16 +8,56 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class GemBlue extends Mover
 {
-    public boolean gemcollected;
+    static boolean gemCollectedL1 = false;
+    static boolean gemCollectedL2 = false;
+    static boolean gemCollectedL3 = false;
+    static boolean gemCollectedL4 = false;
+    
     public void act() 
     {
        for (Actor enemy : getIntersectingObjects(Hero.class)) {
-            if (enemy != null) {
+           if (getWorld() instanceof Level1){
+                gemCollectedL1(); 
+           }
+           if (getWorld() instanceof Level2){
+                gemCollectedL2(); 
+           }
+           if (getWorld() instanceof Level3){
+                gemCollectedL3(); 
+           }
+           if (getWorld() instanceof Level4){
+                gemCollectedL4(); 
+           }
+           if (enemy != null) {
                 getWorld().removeObject(this);
-                gemcollected = true;
                 return;
             }
        }
        applyVelocity();
-    }    
+    }
+    
+    public static void gemCollectedL1(){
+        gemCollectedL1 = true;
+    }
+    
+    public static void gemCollectedL2(){
+        gemCollectedL2 = true;
+    }
+    
+    public static void gemCollectedL3(){
+        gemCollectedL3 = true;
+    }
+    
+    public static void gemCollectedL4(){
+        gemCollectedL4 = true;
+    }
+    
+    public void Level5(){
+        if((gemCollectedL1 == true) && (gemCollectedL2 == true) && (gemCollectedL3 == true) && (gemCollectedL4 == true)){
+            Greenfoot.setWorld(new Level1());
+        }
+        else{
+            Greenfoot.setWorld(new Testlevel());
+        }
+    }
 }

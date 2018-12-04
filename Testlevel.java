@@ -58,8 +58,8 @@ public class Testlevel extends World
         addObject(lifecounter, 71, 30);
         addObject(camera, 0, 0);
         addObject(hero, 400, 700);
-        addObject(new Pinkcoin(), 1110, 930);
-        //addObject(new Door_closedMid(), 1050, 810);
+        //addObject(new Pinkcoin(), 1110, 930);
+        addObject(new Door_closedMid(), 1050, 810);
         // addObject(new CoinSilver(), 500, 810);
         //addObject(new Testvijand(), 600, 822);
         // hoogte/breedte * 60 + 30
@@ -131,10 +131,7 @@ public class Testlevel extends World
         removeObject(coinGold4);
         removeObject(keyBlue);
 
-       
-        Bluecoin bluecoin = new Bluecoin();
-        addObject(bluecoin,850,751);
-        Pinkcoin pinkcoin = new Pinkcoin();
-        addObject(pinkcoin,581,753);
+        GemBlue gemBlue = new GemBlue();
+        addObject(gemBlue,695,755);
     }
 }
