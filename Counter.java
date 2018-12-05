@@ -9,7 +9,7 @@ public class Counter extends Actor
     public void act() 
     {
         setImage(new GreenfootImage("zilver: "+ score + " goud: " + goldscore, 24, Color.BLACK, null));
-        if (score + goldscore > 20){
+        if (score + goldscore >= 20){
             test.extraleven();
             score = 0;
             goldscore = 0;

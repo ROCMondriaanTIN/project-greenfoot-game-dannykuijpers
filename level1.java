@@ -63,6 +63,7 @@ public class Level1 extends World
         addObject(counter, 900, 30);
         addObject(lifecounter, 71, 30);
         
+        addObject(new Cross(), 71, 60);
         addObject(new CoinSilver(), 210, 810);
         addObject(new CoinSilver(), 1470, 870);
         addObject(new CoinSilver(), 2550, 990);
