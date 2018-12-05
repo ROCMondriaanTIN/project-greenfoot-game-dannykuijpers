@@ -74,7 +74,6 @@ public class Level1 extends World
         addObject(new GemBlue(), 5370, 390);
         
         addObject(new Slak(), 1275, 947);
-        addObject(new Slak(), 2130, 1007);
         addObject(new Slak(), 4950, 947);
         
         addObject(new Door_closedMid(), 5730, 925);

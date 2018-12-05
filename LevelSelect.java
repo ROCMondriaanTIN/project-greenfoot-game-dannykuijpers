@@ -8,7 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class LevelSelect extends World
 {
-    GemBlue test = new GemBlue();
+    GemBlue blauw = new GemBlue();
+    GemGreen groen = new GemGreen();
+    GemRed rood = new GemRed();
+    GemYellow geel = new GemYellow();
     /**
      * Constructor for objects of class LevelSelect.
      * 
@@ -30,17 +33,26 @@ public class LevelSelect extends World
         if(Greenfoot.isKeyDown("4"))
             Greenfoot.setWorld(new Level4());
         if(Greenfoot.isKeyDown("5"))
-            test.Level5();
+            blauw.Level5();
         if(Greenfoot.isKeyDown("6"))
             Greenfoot.setWorld(new CharacterSelect());
         if(Greenfoot.isKeyDown("7"))
             Greenfoot.setWorld(new Tutorial());
         if(Greenfoot.isKeyDown("escape"))
             Greenfoot.setWorld(new Testlevel());
-    }
-    
-    public void addGemL1(){
-        addObject(new GemBlue(), 100, 100);
+            
+        if (blauw.gemCollectedL1 == true){
+            addObject(new GemBlue(), 95, 140);
+        }
+        if (groen.gemCollectedL2 == true){
+            addObject(new GemGreen(), 239, 140);
+        }
+        if (rood.gemCollectedL3 == true){
+            addObject(new GemRed(), 383, 140);
+        }
+        if (geel.gemCollectedL4 == true){
+            addObject(new GemYellow(), 526, 140);
+        }
     }
 
     /**

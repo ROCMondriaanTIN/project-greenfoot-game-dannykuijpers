@@ -104,7 +104,7 @@ public class Level3 extends World
             addObject(new CoinSilver(), 1230, 1830);
             addObject(new CoinSilver(), 1710, 2250);
             addObject(new CoinSilver(), 90, 1650);
-            addObject(new GemBlue(), 1410, 1410);
+            addObject(new GemRed(), 1410, 1410);
             
             addObject(new Slak(), 1500, 825);
             // hoogte/breedte * 60 + 30

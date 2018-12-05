@@ -90,7 +90,7 @@ public class Level4 extends World
         addObject(new CoinSilver(), 4170, 1950);
         addObject(new CoinGold(), 1530, 630);
         addObject(new KeyBlue(), 330, 2190);
-        addObject(new GemBlue(), 510, 1650);
+        addObject(new GemYellow(), 510, 1650);
         
         addObject(new Slak(),890, 1305);
         addObject(new Slak(), 3630, 2205);
