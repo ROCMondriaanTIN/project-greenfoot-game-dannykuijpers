@@ -13,11 +13,13 @@ public class GemBlue extends Mover
     static boolean gemCollectedL3 = false;
     static boolean gemCollectedL4 = false;
     
+    
     public void act() 
     {
        for (Actor enemy : getIntersectingObjects(Hero.class)) {
            if (getWorld() instanceof Level1){
                 gemCollectedL1(); 
+                //LevelSelect.act();
            }
            if (getWorld() instanceof Level2){
                 gemCollectedL2(); 
@@ -36,7 +38,7 @@ public class GemBlue extends Mover
        applyVelocity();
     }
     
-    public static void gemCollectedL1(){
+    public void gemCollectedL1(){
         gemCollectedL1 = true;
     }
     
@@ -54,7 +56,7 @@ public class GemBlue extends Mover
     
     public void Level5(){
         if((gemCollectedL1 == true) && (gemCollectedL2 == true) && (gemCollectedL3 == true) && (gemCollectedL4 == true)){
-            Greenfoot.setWorld(new Level1());
+            Greenfoot.setWorld(new Level5());
         }
         else{
             Greenfoot.setWorld(new Diamantloos());

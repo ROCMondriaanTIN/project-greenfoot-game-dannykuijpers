@@ -33,8 +33,14 @@ public class LevelSelect extends World
             test.Level5();
         if(Greenfoot.isKeyDown("6"))
             Greenfoot.setWorld(new CharacterSelect());
+        if(Greenfoot.isKeyDown("7"))
+            Greenfoot.setWorld(new Tutorial());
         if(Greenfoot.isKeyDown("escape"))
             Greenfoot.setWorld(new Testlevel());
+    }
+    
+    public void addGemL1(){
+        addObject(new GemBlue(), 100, 100);
     }
 
     /**

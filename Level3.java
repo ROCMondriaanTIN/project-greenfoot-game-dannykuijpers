@@ -92,6 +92,7 @@ public class Level3 extends World
             addObject(hero, 810, 2670);
             addObject(counter, 900, 30);
             addObject(lifecounter, 71, 30);
+            addObject(new Cross(), 900, 70);
             
             addObject(new Door_closedMid(), 690, 2665);
             addObject(new Door_closedTop(), 690, 2605);

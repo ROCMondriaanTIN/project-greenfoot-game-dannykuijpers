@@ -16,8 +16,8 @@ public class Cross extends Mover
     }
     public void act() 
     {
-        if (Greenfoot.mousePressed(Cross.class) == true){
-            if (getWorld() instanceof Level1) Greenfoot.setWorld(new Level1());
-        }
-    }    
-}
+        if (Greenfoot.mouseClicked(this))
+            Greenfoot.setWorld(new LevelSelect());
+    }
+}    
+

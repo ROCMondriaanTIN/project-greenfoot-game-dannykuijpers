@@ -81,6 +81,7 @@ public class Level4 extends World
         addObject(hero, 450, 990);
         addObject(counter, 900, 30);
         addObject(lifecounter, 71, 30);
+        addObject(new Cross(), 900, 70);
         
         addObject(new CoinSilver(), 1110, 630);
         addObject(new CoinSilver(), 1170, 2190);
