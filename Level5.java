@@ -81,7 +81,7 @@ public class Level5 extends World
         addObject(hero, 630, 2130);
         addObject(counter, 900, 30);
         addObject(lifecounter, 71, 30);
-        addObject(new Cross(), 900, 70);
+        addObject(new Cross(), 70, 70);
         
         addObject(new CoinSilver(), 1770, 1950);
         addObject(new CoinSilver(), 3570, 2070);

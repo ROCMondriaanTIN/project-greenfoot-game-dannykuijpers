@@ -44,7 +44,7 @@ public class Hero extends Mover {
         
         if (oldY < getY() || oldY > getY()){
             canJump = false;
-        }
+        } 
         else{
             canJump = true;
         }

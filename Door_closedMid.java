@@ -12,8 +12,13 @@ public class Door_closedMid extends Mover
    {
        if(getOneIntersectingObject(Hero.class)!= null && getWorld().getObjects(KeyBlue.class).isEmpty())
         {
-            Greenfoot.setWorld(new LevelSelect());
-        }
+            if (getWorld() instanceof Level5){
+                Greenfoot.setWorld(new Overwinningscherm());
+            }
+            else{
+                Greenfoot.setWorld(new LevelSelect());
+            }
+            }
        applyVelocity();
    }    
 }

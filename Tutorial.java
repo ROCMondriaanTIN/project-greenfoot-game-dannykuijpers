@@ -16,7 +16,7 @@ public class Tutorial extends World
     public Tutorial()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(450, 370, 1); 
+        super(470, 420, 1); 
         prepare();
     }
 
