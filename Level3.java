@@ -11,7 +11,7 @@ public class Level3 extends World
     private CollisionEngine ce;
     Counter counter = new Counter();
     LifeCounter lifecounter = new LifeCounter();
-    
+    KeyBlue key = new KeyBlue();
     /**
      * Constructor for objects of class level1.
      * 
@@ -92,7 +92,7 @@ public class Level3 extends World
             addObject(hero, 810, 2670);
             addObject(counter, 900, 30);
             addObject(lifecounter, 71, 30);
-            addObject(new Cross(), 70, 70);
+            addObject(new Cross(), 70, 120);
             
             addObject(new Door_closedMid(), 690, 2665);
             addObject(new Door_closedTop(), 690, 2605);
@@ -122,6 +122,9 @@ public class Level3 extends World
     @Override
     public void act() {
         ce.update();
+        if (key.keyCollected == true){
+            addObject(new Sleutel(), 50, 70);
+        }
     } 
 
     /**

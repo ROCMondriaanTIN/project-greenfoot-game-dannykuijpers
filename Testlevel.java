@@ -11,7 +11,7 @@ public class Testlevel extends World
     private CollisionEngine ce;
     Counter counter = new Counter();
     LifeCounter lifecounter = new LifeCounter();
-    
+    KeyBlue key = new KeyBlue();
     public Testlevel()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -63,6 +63,8 @@ public class Testlevel extends World
         // addObject(new CoinSilver(), 500, 810);
         //addObject(new Testvijand(), 600, 822);
         // hoogte/breedte * 60 + 30
+        addObject(new Cross(), 70, 120);
+        addObject(new KeyBlue(), 500, 700);
         
 
         // Initialiseren van de CollisionEngine zodat de speler niet door de tile heen kan lopen.
@@ -81,6 +83,9 @@ public class Testlevel extends World
     @Override
     public void act() {
         ce.update();
+        if (key.keyCollected == true){
+            addObject(new Sleutel(), 50, 70);
+        }
     } 
 
     /**

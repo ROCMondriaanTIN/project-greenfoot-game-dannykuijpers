@@ -11,7 +11,7 @@ public class Level4 extends World
     private CollisionEngine ce;
     Counter counter = new Counter();
     LifeCounter lifecounter = new LifeCounter();
-    
+    KeyBlue key = new KeyBlue();
     /**
      * Constructor for objects of class level1.
      * 
@@ -81,7 +81,7 @@ public class Level4 extends World
         addObject(hero, 450, 990);
         addObject(counter, 900, 30);
         addObject(lifecounter, 71, 30);
-        addObject(new Cross(), 70, 70);
+        addObject(new Cross(), 70, 120);
         
         addObject(new CoinSilver(), 1110, 630);
         addObject(new CoinSilver(), 1170, 2190);
@@ -119,6 +119,9 @@ public class Level4 extends World
     @Override
     public void act() {
         ce.update();
+        if (key.keyCollected == true){
+            addObject(new Sleutel(), 50, 70);
+        }
     } 
 
     /**

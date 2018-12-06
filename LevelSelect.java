@@ -12,6 +12,7 @@ public class LevelSelect extends World
     GemGreen groen = new GemGreen();
     GemRed rood = new GemRed();
     GemYellow geel = new GemYellow();
+    KeyBlue sleutel = new KeyBlue();
     /**
      * Constructor for objects of class LevelSelect.
      * 
@@ -24,8 +25,10 @@ public class LevelSelect extends World
     }
 
     public void act(){
-        if(Greenfoot.isKeyDown("1"))
+        if(Greenfoot.isKeyDown("1")){
             Greenfoot.setWorld(new Level1());
+            //sleutel.levelStart();
+        }
         if(Greenfoot.isKeyDown("2"))
             Greenfoot.setWorld(new Level2());
         if(Greenfoot.isKeyDown("3"))
