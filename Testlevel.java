@@ -12,6 +12,7 @@ public class Testlevel extends World
     Counter counter = new Counter();
     LifeCounter lifecounter = new LifeCounter();
     KeyBlue key = new KeyBlue();
+    GemBlue gem = new GemBlue();
     public Testlevel()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -85,6 +86,9 @@ public class Testlevel extends World
         ce.update();
         if (key.keyCollected == true){
             addObject(new Sleutel(), 50, 70);
+        }
+        if (gem.dGemCollected == true){
+            addObject(new DisplayGem(), 100, 70);
         }
     } 
 

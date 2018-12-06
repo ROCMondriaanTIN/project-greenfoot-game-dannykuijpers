@@ -9,12 +9,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class GemBlue extends Mover
 {
     static boolean gemCollectedL1 = false;
+    static boolean dGemCollected = false;
     GemGreen groen = new GemGreen();
     GemRed rood = new GemRed();
     GemYellow geel = new GemYellow();
     public void act() 
     {
        for (Actor enemy : getIntersectingObjects(Hero.class)) {
+           dGemCollected();
            if (getWorld() instanceof Level1){
                 gemCollectedL1();
            }
@@ -37,5 +39,13 @@ public class GemBlue extends Mover
         else{
             Greenfoot.setWorld(new Diamantloos());
         }
+    }
+    
+    public void dGemCollected(){
+        dGemCollected = true;
+    }
+    
+    public void levelStart(){
+        dGemCollected = false;
     }
 }

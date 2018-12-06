@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Cross extends Mover
 {
     KeyBlue sleutel = new KeyBlue();
+    GemBlue gem = new GemBlue();
     public Cross(){
         GreenfootImage myImage = getImage();
         int myNewHeight = (int)myImage.getHeight()/6;
@@ -20,6 +21,7 @@ public class Cross extends Mover
         if (Greenfoot.mouseClicked(this)){
             Greenfoot.setWorld(new LevelSelect());
             sleutel.levelStart();
+            gem.levelStart();
         }
     }
 }    
