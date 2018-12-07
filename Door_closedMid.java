@@ -10,6 +10,9 @@ public class Door_closedMid extends Mover
 {
    KeyBlue sleutel = new KeyBlue();
    GemBlue gem = new GemBlue();
+   GemGreen gemG = new GemGreen();
+   GemRed gemR = new GemRed();
+   GemYellow gemY = new GemYellow();
     public void act() 
    {
        if(getOneIntersectingObject(Hero.class)!= null && getWorld().getObjects(KeyBlue.class).isEmpty())
@@ -22,6 +25,9 @@ public class Door_closedMid extends Mover
                 Greenfoot.setWorld(new LevelSelect());
                 sleutel.levelStart();
                 gem.levelStart();
+                gemG.levelStart();
+                gemR.levelStart();
+                gemY.levelStart();
             }
             }
        applyVelocity();

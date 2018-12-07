@@ -9,9 +9,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class GemRed extends Mover
 {
     static boolean gemCollectedL3 = false;
+    static boolean dGemCollectedR = false;
     public void act() 
     {
         for (Actor enemy : getIntersectingObjects(Hero.class)) {
+           dGemCollectedR();
            if (getWorld() instanceof Level3){
                 gemCollectedL3();
            }
@@ -25,5 +27,13 @@ public class GemRed extends Mover
     
     public static void gemCollectedL3(){
         gemCollectedL3 = true;
+    }
+    
+    public void dGemCollectedR(){
+        dGemCollectedR = true;
+    }
+    
+    public void levelStart(){
+        dGemCollectedR = false;
     }
 }

@@ -12,7 +12,7 @@ public class Level3 extends World
     Counter counter = new Counter();
     LifeCounter lifecounter = new LifeCounter();
     KeyBlue key = new KeyBlue();
-    GemBlue gem = new GemBlue();
+    GemRed gem = new GemRed();
     /**
      * Constructor for objects of class level1.
      * 
@@ -126,8 +126,8 @@ public class Level3 extends World
         if (key.keyCollected == true){
             addObject(new Sleutel(), 50, 70);
         }
-        if (gem.dGemCollected == true){
-            addObject(new DisplayGem(), 100, 70);
+        if (gem.dGemCollectedR == true){
+            addObject(new DisplayGemR(), 100, 70);
         }
     } 
 
