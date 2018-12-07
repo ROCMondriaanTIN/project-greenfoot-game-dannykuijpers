@@ -7,6 +7,12 @@ public class Slak extends Mover
     private int xMax;
     private boolean firstAct;
     private int speed;
+    
+    KeyBlue sleutel = new KeyBlue();
+    GemBlue gem = new GemBlue();
+    GemGreen gemG = new GemGreen();
+    GemRed gemR = new GemRed();
+    GemYellow gemY = new GemYellow();
 
     public Slak() {
         super();
@@ -25,14 +31,27 @@ public class Slak extends Mover
         LifeCounter slak = new LifeCounter();
         for (Actor enemy : getIntersectingObjects(Hero.class)) {
             if (enemy != null){
-                if (getWorld() instanceof Level1) Greenfoot.setWorld(new Level1());
+                if (getWorld() instanceof Level1){
+                    Greenfoot.setWorld(new Level1());
+                    sleutel.levelStart();
+                    gem.levelStart();
+                }
                 if (getWorld() instanceof Level2) Greenfoot.setWorld(new Level2());
-                if (getWorld() instanceof Level3) Greenfoot.setWorld(new Level3());
-                if (getWorld() instanceof Level4) Greenfoot.setWorld(new Level4());
+                if (getWorld() instanceof Level3){
+                    Greenfoot.setWorld(new Level3());
+                    sleutel.levelStart();
+                    gemR.levelStart();
+                }
+                if (getWorld() instanceof Level4){
+                    Greenfoot.setWorld(new Level4());
+                    sleutel.levelStart();
+                    gemY.levelStart();
+                }
                 if (getWorld() instanceof Level5) Greenfoot.setWorld(new Level5());
                 if (getWorld() instanceof Testlevel) Greenfoot.setWorld(new Testlevel());
                 return;
             }
+            
         }
         
         int x = getX();
@@ -55,6 +74,8 @@ public class Slak extends Mover
             x = xMin;
             getImage().mirrorHorizontally();
         }
-        if(isTouching(Hero.class)) slak.takelife();
+        if(isTouching(Hero.class)){ 
+            slak.takelife();
+        }
     }
 }

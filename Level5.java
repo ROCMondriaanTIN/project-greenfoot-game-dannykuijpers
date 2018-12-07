@@ -125,9 +125,6 @@ public class Level5 extends World
         if (key.keyCollected == true){
             addObject(new Sleutel(), 50, 70);
         }
-        if (gem.dGemCollected == true){
-            addObject(new DisplayGem(), 100, 70);
-        }
     } 
 
     /**

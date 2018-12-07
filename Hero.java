@@ -19,6 +19,11 @@ public class Hero extends Mover {
     private int greenCoin = 0;
     private int pinkCoin = 0;
 
+    KeyBlue sleutel = new KeyBlue();
+    GemBlue gem = new GemBlue();
+    GemGreen gemG = new GemGreen();
+    GemRed gemR = new GemRed();
+    GemYellow gemY = new GemYellow();
 
     public Hero() {
         super();
@@ -54,11 +59,30 @@ public class Hero extends Mover {
         for(Actor liquidWater: getIntersectingObjects(TileExtended.class)){
             TileExtended tile = (TileExtended) liquidWater;
             if(tile != null && tile.type == "water"){
-                if (getWorld() instanceof Level1) Greenfoot.setWorld(new Level1());
-                if (getWorld() instanceof Level2) Greenfoot.setWorld(new Level2());
-                if (getWorld() instanceof Level3) Greenfoot.setWorld(new Level3());
-                if (getWorld() instanceof Level4) Greenfoot.setWorld(new Level4());
-                if (getWorld() instanceof Level5) Greenfoot.setWorld(new Level5());
+                if (getWorld() instanceof Level1){
+                    Greenfoot.setWorld(new Level1());
+                    sleutel.levelStart();
+                    gem.levelStart();
+                }
+                if (getWorld() instanceof Level2){
+                    Greenfoot.setWorld(new Level2());
+                    sleutel.levelStart();
+                    gemG.levelStart();
+                }
+                if (getWorld() instanceof Level3){
+                    Greenfoot.setWorld(new Level3());
+                    sleutel.levelStart();
+                    gemR.levelStart();
+                }
+                if (getWorld() instanceof Level4){
+                    Greenfoot.setWorld(new Level4());
+                    sleutel.levelStart();
+                    gemY.levelStart();
+                }
+                if (getWorld() instanceof Level5){
+                    Greenfoot.setWorld(new Level5());
+                    sleutel.levelStart();
+                }
                 water.takelife();
                 break;
             }
